@@ -1,0 +1,144 @@
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 10vw 10vw 10vw 20vw 50vw;
+    grid-template-rows: 10vh 60vh 30vh;
+}
+
+.grid_item{
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+.item_1, .item_3, .item_4{
+    grid-column: 2 / 5;
+    text-align: left;
+}
+
+.item_1{
+    grid-row: 1;
+}
+.item_2{
+    grid-column: 5;
+    grid-row: 1 /  4;
+    background-color: red;
+}
+p{
+    font-size: 30px;
+}
+.item_3{
+    grid-row: 2;
+    font-size: 15px;
+}
+
+.item_4{
+    grid-row: 3;
+    font-size: 10px;
+}
+
+.iphone{
+    height: 100%;
+    animation-name: spin;
+    animation-duration: 75ms;
+    animation-delay: inherit;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+.disapear:hover{
+    opacity: 0;
+}
+
+.spin:hover{
+    animation-name: spin;
+    animation-duration: 1ms;
+    animation-delay: inherit;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+.active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+
+.inactive {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s linear;
+}
+
+
+@media only screen and (max-width: 900px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto 98vh auto;
+        grid-template-rows: 10vh 60vh 30vh;
+    }
+
+    .grid_item{
+        padding: 0;
+    }
+    .item_1, .item_3, .item_4{
+        text-align: center;
+        grid-column: 2;
+    }
+
+    .item_2{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto 90vh auto;
+        grid-template-rows: 10vh 60vh 30vh;
+    }
+
+    .grid_item{
+        padding: 0;
+    }
+    .item_1, .item_3, .item_4{
+        text-align: center;
+        grid-column: 2;
+    }
+
+    .item_2{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px){
+
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto 98vh auto;
+        grid-template-rows: 10vh 60vh 30vh;
+    }
+
+    .grid_item{
+        padding: 0;
+    }
+    .item_1, .item_3, .item_4{
+        text-align: center;
+        grid-column: 2;
+    }
+
+    .item_2{
+        display: none;
+    }
+}
+
