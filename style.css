@@ -1,11 +1,3 @@
-@keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
-}
 
 .grid-container{
     display: grid;
@@ -22,7 +14,6 @@
 .item_1, .item_3, .item_4{
     grid-column: 2 / 5;
     text-align: left;
-    -webkit-animation:blackAndWhite 1s infinite;
 }
 
 .item_1{
@@ -46,56 +37,8 @@ p{
     font-size: 10px;
 }
 
-.iphone{
+.iphone {
     height: 100%;
-    animation-name: spin;
-    animation-duration: 75ms;
-    animation-delay: inherit;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-
-}
-.disappear:hover{
-    opacity: 0;
-}
-
-.spin:hover{
-    animation-name: spin;
-    animation-duration: 1ms;
-    animation-delay: inherit;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-
-.active {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 1s linear;
-}
-
-.inactive {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s 1s, opacity 1s linear;
-}
-
-
-/* CSS Ben*/
-
-body{
-    -webkit-animation:blackAndWhite 1s infinite;
-}
-
-@-webkit-keyframes blackAndWhite {
-    0% {background-color:black;}
-    100% {background-color:white;}
-}
-
-.regenboog-text{
-    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 
